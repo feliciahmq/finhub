@@ -5,8 +5,6 @@ import { useTheme } from "@mui/material";
 import { useMemo } from "react";
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Line, CartesianGrid, Legend, LineChart, BarChart, Bar, Rectangle } from "recharts";
 
-
-
 const Row1 = () => {
   const { palette } = useTheme();
   const { data } = useGetKpisQuery();
@@ -109,7 +107,9 @@ const Row1 = () => {
           sideText="+5%"
         />
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart  
+          <LineChart 
+            width={500}
+            height={400} 
             data={revenueProfit}
             margin={{
               top: 20,
@@ -168,7 +168,7 @@ const Row1 = () => {
             <XAxis dataKey="name" axisLine={false} tickLine={false} style={{ fontSize: "10px" }} />
             <YAxis axisLine={false} tickLine={false} style={{ fontSize: "10px" }} />
             <Tooltip />
-            <Bar dataKey="revenue" fill="url(#colorRevenue)" activeBar={<Rectangle fill={palette.tertiary[500]} stroke={palette.primary.main}  />} />
+            <Bar dataKey="revenue" fill="url(#colorRevenue)" activeBar={<Rectangle fill={palette.tertiary[500]} stroke={palette.primary.main} />} />
           </BarChart>
         </ResponsiveContainer>
       </DashboardBox>
