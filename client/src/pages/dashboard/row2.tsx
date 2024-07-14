@@ -1,12 +1,19 @@
 import BoxHeader from "@/components/boxHeader";
 import DashboardBox from "@/components/dashboardBox";
+import FlexBetween from "@/components/flexBetween";
 import { useGetKpisQuery, useGetProductsQuery } from "@/state/api";
-import { useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { useMemo } from "react";
-import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+
+const pieData = [
+  { name: "Group A", value: 27 },
+  { name: "Group B", value: 73 },
+]
 
 const Row2 = () => {
   const { palette } = useTheme();
+  const pieColors = [palette.primary[800], palette.primary[300]]
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
 
@@ -60,8 +67,53 @@ const Row2 = () => {
           </LineChart>
         </ResponsiveContainer>
       </DashboardBox>
-      <DashboardBox gridArea="e"></DashboardBox>
-      <DashboardBox gridArea="f"></DashboardBox>
+
+      <DashboardBox gridArea="e">
+        <BoxHeader title="Campaigns and Targets" sideText="+4%" />
+        <FlexBetween mt="0.25rem" gap="1.5rem" pr="1rem">
+          <PieChart 
+            width={110} 
+            height={100}
+            margin={{
+              top: 0,
+              right: -10,
+              left: 10,
+              bottom: 0,
+            }}
+          >
+            <Pie
+              stroke="none"
+              data={pieData}
+              innerRadius={18}
+              outerRadius={38}
+              paddingAngle={2}
+              dataKey="value"
+            >
+              {pieData.map((entry, index) => (
+                <Cell 
+                  key={`cell-${index}`} 
+                  fill={pieColors[index]} 
+                />
+              ))}
+            </Pie>
+          </PieChart>
+          <Box ml="-0.7rem" flexBasis="40%" textAlign="center">
+            <Typography variant="h5">Target Sales</Typography>
+            <Typography variant="h3" m="0.3 rem 0" color={palette.primary[300]}>73%</Typography>
+            <Typography variant="h6">Finance goals achieved in campaign.</Typography>
+          </Box>
+          <Box flexBasis="40%">
+            <Typography variant="h5">Losses in Revenue</Typography>
+            <Typography variant="h6">Loses decreased by 25%</Typography>
+            <Typography variant="h5" mt="0.4 rem">Profit Margins</Typography>
+            <Typography variant="h6" mt="0.4 rem">Margines increased by 30%.</Typography>
+          </Box>
+        </FlexBetween>
+      </DashboardBox>
+
+      <DashboardBox gridArea="f">
+
+      </DashboardBox>
     </>
   );
 };
