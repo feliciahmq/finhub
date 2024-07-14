@@ -53,7 +53,7 @@ const Row1 = () => {
         <BoxHeader 
           title="Revenue and Expenses"
           subtitle="Top line represents revenue, Bottom line represents expenses"
-          sideText="+5%"
+          sideText="+25%"
         />
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart  
@@ -104,7 +104,7 @@ const Row1 = () => {
         <BoxHeader 
           title="Profit and Revenue"
           subtitle="Profit Y-axis on the left, Revenue Y-axis on the right"
-          sideText="+5%"
+          sideText="+23%"
         />
         <ResponsiveContainer width="100%" height="100%">
           <LineChart 

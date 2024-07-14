@@ -43,14 +43,12 @@ const Row2 = () => {
     );
   }, [productData]);
   
-  console.log("Products data", productExpenseData)
-
   return (
     <>
       <DashboardBox gridArea="d">
         <BoxHeader 
           title="Operational vs Non-Operational Expenses"
-          sideText="+4%"
+          sideText="+13%"
         />
         <ResponsiveContainer width="100%" height="100%">
           <LineChart  
@@ -130,7 +128,7 @@ const Row2 = () => {
         <BoxHeader 
           title="Product Prices vs Expenses" 
           subtitle="X-axis represents Prices, Y-axis represents Expenses"
-          sideText="+4%" 
+          sideText="+8%" 
         />
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart

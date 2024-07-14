@@ -1,6 +1,6 @@
 import DashboardBox from "@/components/dashboardBox";
 
-const row3 = () => {
+const Row3 = () => {
   return (
     <>  
       <DashboardBox gridArea="g"></DashboardBox>
@@ -11,4 +11,4 @@ const row3 = () => {
   );
 };
 
-export default row3;
+export default Row3;
