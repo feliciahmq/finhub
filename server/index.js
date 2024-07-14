@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors(
   {
-    origin: ["https://finhub.vercel.app"],
+    origin: ["https://finhub-peach.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
   }
