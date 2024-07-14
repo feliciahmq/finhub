@@ -195,7 +195,7 @@ const Row3 = () => {
           >
           </Box>
           <Typography variant="h6" margin="0.5rem 1rem">
-            Our performance metrics show significant improvement this year, highlighting our successful strategies and execution.
+            Our performance metrics show significant improvement this year, highlighting our successful strategies and execution. The team's efforts have resulted in remarkable growth and achievement of our financial goals. 
           </Typography>
         </Box>
       </DashboardBox>

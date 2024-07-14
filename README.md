@@ -1,6 +1,6 @@
 # FinHub - Data Dashboard
 
-This is a Data Dashboard project built with MERN stack, integrated with Machine Learning Predictions. Please note that this project did not account for proper data visualisations! :>
+This is a Data Dashboard project built with MERN stack, integrated with simple machine learning predictions using regression-js. Please note that this project did not account for proper data visualisations! :>
 
 ## Frontend
 - Vite + React
