@@ -37,10 +37,10 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
     // Add data 1 time only :>
-    // await mongoose.connection.db.dropDatabase(); // drop current database
-    // KPI.insertMany(kpis); 
-    // Product.insertMany(products); 
-    // Transaction.insertMany(transactions);
+    await mongoose.connection.db.dropDatabase(); // drop current database
+    KPI.insertMany(kpis); 
+    Product.insertMany(products); 
+    Transaction.insertMany(transactions);
     
   })
   .catch((error) => console.log(`${error} did not connect`));
