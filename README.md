@@ -13,6 +13,12 @@ This is a Data Dashboard project built using MERN stack, and integrated with sim
 - Express.js
 - MongoDB
 
+## Screenshots
+![dashboard](public/dashboard.png)
+![predictions](public/predictions.png)
+
+![gif](public/preview.gif)
+
 ## Getting Started
 1. Clone the repository
 ``` bash
