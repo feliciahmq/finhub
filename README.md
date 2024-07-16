@@ -15,7 +15,7 @@ This is a Data Dashboard project built using MERN stack, and integrated with sim
 
 ## Preview
 
-Preview video [here](https://drive.google.com/file/d/1zvYOmkbDfuLAKlEVh8YF6VTaAFmYxOXx/view?usp=sharing) !
+Preview video <a href="https://drive.google.com/file/d/1zvYOmkbDfuLAKlEVh8YF6VTaAFmYxOXx/view?usp=sharing" target="_blank">here</a> !
 
 ![dashboard](public/dashboard.png)
 ![predictions](public/predictions.png)
